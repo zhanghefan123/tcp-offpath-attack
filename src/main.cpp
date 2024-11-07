@@ -24,8 +24,8 @@ void resolve_command_args(int argc, char** argv){
     commandArgs.VICTIM_IP = argv[2];
     commandArgs.SERVER_IP = argv[3];
     commandArgs.SERVER_PORT = atoi(argv[4]);
-    commandArgs.VICTIM_MAC = Tins::Utils::resolve_hwaddr(commandArgs.VICTIM_IP, sender);
-    commandArgs.SERVER_MAC = Tins::Utils::resolve_hwaddr(commandArgs.SERVER_IP, sender);
+    commandArgs.VICTIM_MAC = Tins::Utils::resolve_hwaddr(argv[2], sender);
+    commandArgs.SERVER_MAC = Tins::Utils::resolve_hwaddr(argv[3], sender);
     globalArgs.SetCommandArgs(commandArgs);
     globalArgs.SetPacketSender(sender);
 

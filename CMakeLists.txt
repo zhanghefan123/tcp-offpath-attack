@@ -7,7 +7,8 @@ add_executable(tcp_off_path
         src/main.cpp
         src/sniffer/sniffer.cpp
         src/synchronizer/synchronizer.cpp
-        src/common/common.cpp)
+        src/common/common.cpp
+        src/route/route.cpp)
 
 set(HEADERS_DIR
         /usr/local/include
